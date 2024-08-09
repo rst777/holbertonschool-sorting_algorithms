@@ -18,8 +18,8 @@
 void selection_sort(int *array, size_t size)
 
 {
-	size_t i, j;
-	int temp, index;
+	size_t i, j, index;
+	int temp;
 
 /* Parcourt chaque élément du tableau sauf le dernier */
 	for (i = 0; i < size - 1; i++)
@@ -38,12 +38,15 @@ void selection_sort(int *array, size_t size)
 				index = j;
 			}
 		}
+/* Imprimer que si il y à eu échange */
+		if (index != i)
+		{
 /* Échange l'élément courant avec le plus petit élément trouvé */
 		temp = array[index];
 		array[index] = array[i];
 		array[i] = temp;
 /* Affiche le tableau après chaque échange */
 		print_array(array, size);
+		}
 	}
-
 }
