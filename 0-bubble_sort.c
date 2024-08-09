@@ -37,6 +37,9 @@ void bubble_sort(int *array, size_t size)
 			temp = array[j];
 			array[j] = array[j + 1];
 			array[j + 1] = temp;
+
+ /* Affiche le tableau après chaque échange */
+			print_array(array, size);
 			}
 		}
 	}
